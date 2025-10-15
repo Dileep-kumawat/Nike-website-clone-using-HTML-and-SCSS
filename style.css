@@ -1,0 +1,357 @@
+@font-face {
+  font-family: nike;
+  src: url(./Nike-Futura.woff2);
+}
+@font-face {
+  font-family: helveticaNow;
+  src: url(./HelveticaNowText.woff2);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: helveticaNow;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+.navbar #logo img {
+  height: 1.25rem;
+  cursor: pointer;
+}
+.navbar .nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+}
+.navbar .nav-links .nav-item a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  padding: 5px;
+  transition: color 0.2s ease;
+}
+.navbar .nav-links .nav-item:hover > a {
+  color: #555;
+}
+.navbar .nav-links .nav-item .mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  z-index: 100;
+}
+.navbar .nav-links .nav-item .mega-menu .menu-content {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 30px 50px;
+}
+.navbar .nav-links .nav-item .mega-menu .menu-content .menu-column h4 {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #111;
+}
+.navbar .nav-links .nav-item .mega-menu .menu-content .menu-column ul {
+  list-style: none;
+}
+.navbar .nav-links .nav-item .mega-menu .menu-content .menu-column ul li a {
+  display: block;
+  color: #555;
+  padding: 5px 0;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+.navbar .nav-links .nav-item .mega-menu .menu-content .menu-column ul li a:hover {
+  color: #111;
+}
+.navbar .nav-links .nav-item:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.navbar #buttons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.navbar #buttons i {
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.navbar #buttons i:hover {
+  background-color: #CACACB;
+}
+.navbar #buttons #search-box {
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background-color: #e5e5e5;
+  padding: 2px;
+}
+.navbar #buttons #search-box i {
+  padding: 10px;
+  border-radius: 50%;
+  background-color: white;
+}
+.navbar #buttons #search-box i:hover {
+  cursor: pointer;
+  background-color: #CACACB;
+}
+.navbar #buttons #search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding-right: 10px;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+main #hero-section {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main #hero-section video {
+  height: 140%;
+  width: 100%;
+}
+main #athlete-pick {
+  height: 100%;
+  width: 100%;
+  padding: 100px 50px;
+}
+main #athlete-pick #imgs {
+  height: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+main #athlete-pick #imgs .image {
+  margin-top: 2rem;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+main #athlete-pick #imgs .image button {
+  position: absolute;
+  bottom: 10%;
+  cursor: pointer;
+  left: 5%;
+  border: none;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+main #athlete-pick #imgs .image:nth-child(1) {
+  background-image: url(./Assets/ap\ 1.avif);
+}
+main #athlete-pick #imgs .image:nth-child(2) {
+  background-image: url(./Assets/ap\ 2.avif);
+}
+main #featured {
+  min-height: 100%;
+  width: 100%;
+}
+main #featured h1 {
+  padding: 100px 50px 30px 50px;
+}
+main #featured #grid {
+  height: 160%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+main #featured #grid .grid-items {
+  position: relative;
+}
+main #featured #grid .grid-items img {
+  height: 100%;
+  width: 100%;
+}
+main #featured #grid .grid-items #text {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  color: white;
+}
+main #featured #grid .grid-items #text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+main #featured #grid .grid-items #text button {
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+main #corausal1,
+main #corausal2,
+main #corausal3 {
+  min-height: 100%;
+  width: 100%;
+  padding: 100px 50px;
+}
+main #corausal1 .carousel,
+main #corausal2 .carousel,
+main #corausal3 .carousel {
+  height: 480px;
+  overflow: auto hidden;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+main #corausal1 .carousel::-webkit-scrollbar,
+main #corausal2 .carousel::-webkit-scrollbar,
+main #corausal3 .carousel::-webkit-scrollbar {
+  display: none;
+}
+main #corausal1 .carousel .carousel-track,
+main #corausal2 .carousel .carousel-track,
+main #corausal3 .carousel .carousel-track {
+  display: flex;
+  gap: 20px;
+}
+main #corausal1 .carousel .carousel-track .slide,
+main #corausal2 .carousel .carousel-track .slide,
+main #corausal3 .carousel .carousel-track .slide {
+  height: 450px;
+}
+main #corausal1 .carousel .carousel-track .slide img,
+main #corausal2 .carousel .carousel-track .slide img,
+main #corausal3 .carousel .carousel-track .slide img {
+  height: 80%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+main #corausal1 .carousel .carousel-track .slide h2,
+main #corausal2 .carousel .carousel-track .slide h2,
+main #corausal3 .carousel .carousel-track .slide h2 {
+  font-size: 1rem;
+}
+main #corausal1 .carousel .carousel-track .slide h3,
+main #corausal2 .carousel .carousel-track .slide h3,
+main #corausal3 .carousel .carousel-track .slide h3 {
+  color: #555;
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+main .footer {
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+  padding: 50px 8%;
+  font-family: "HelveticaNow", Arial, sans-serif;
+  color: #111;
+}
+main .footer .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 80px;
+  margin-bottom: 40px;
+}
+main .footer .footer-links .footer-column {
+  min-width: 150px;
+}
+main .footer .footer-links .footer-column h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #111;
+}
+main .footer .footer-links .footer-column ul {
+  list-style: none;
+}
+main .footer .footer-links .footer-column ul li {
+  margin-bottom: 8px;
+}
+main .footer .footer-links .footer-column ul li a {
+  text-decoration: none;
+  color: #555;
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+main .footer .footer-links .footer-column ul li a:hover {
+  color: #111;
+}
+main .footer .footer-bottom {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #555;
+}
+main .footer .footer-bottom p {
+  flex: 1 1 200px;
+}
+main .footer .footer-bottom .footer-bottom-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+}
+main .footer .footer-bottom .footer-bottom-links li a {
+  text-decoration: none;
+  color: #555;
+  transition: color 0.2s ease;
+}
+main .footer .footer-bottom .footer-bottom-links li a:hover {
+  color: #111;
+}
+main .footer .footer-bottom .footer-country {
+  flex: 0 0 auto;
+  font-weight: 500;
+  color: #111;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px;
+  }
+  .footer .footer-links {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .footer .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */
