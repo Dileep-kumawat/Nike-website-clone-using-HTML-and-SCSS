@@ -7,7 +7,7 @@ This project recreates Nike’s clean and bold design style, featuring dynamic s
 
 ## 🚀 Live Demo
 
-🔗 **Live Site:** [https://your-nike-clone-demo-link.vercel.app](https://your-nike-clone-demo-link.vercel.app)
+🔗 **Live Site:** [https://nike-using-html-scss.netlify.app/](https://nike-using-html-scss.netlify.app/)
 
 🎥 **Demo Video:** [click here to Watch demo video](./screenshots/demo.mp4)
 
@@ -92,7 +92,7 @@ Nike-Clone/
 1. Clone the repository
 
    ```bash
-   git clone https://github.com/yourusername/nike-clone.git
+   git clone https://github.com/Dileep-kumawat/Nike-website-clone-using-HTML-and-SCSS.git
 2. Open the folder in your code editor
 3. Run `index.html` in your browser
 
